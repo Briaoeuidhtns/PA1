@@ -1,9 +1,9 @@
 digraph {
-    graph [pad="0.5", nodesep="0.5", ranksep="2"];
+    graph [pad="0.5", nodesep=".2", ranksep="2"];
     node [shape=plain]
-    rankdir=LR;
+    rankdir=TB;
 
-tollway [label=<
+tollway [rank=1 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Tollway</b></td></tr>
   <tr>
@@ -16,7 +16,7 @@ tollway [label=<
 </table>>];
 toll_gate:tw_id -> tollway:id
 
-toll_gate [label=<
+toll_gate [rank=2 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Toll Gate</b></td></tr>
   <tr>
@@ -25,7 +25,7 @@ toll_gate [label=<
   </tr>
 </table>>];
 
-etc_reading [label=<
+etc_reading [rank=3 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>ETCReading</b></td></tr>
   <tr>
@@ -38,7 +38,7 @@ etc_reading [label=<
 etc_reading:tag -> vehicle:tag
 etc_reading:tg_id -> toll_gate:id
 
-constructor [label=<
+constructor [rank=4 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Constructor</b></td></tr>
   <tr>
@@ -47,7 +47,7 @@ constructor [label=<
   </tr>
 </table>>];
 
-constructed [label=<
+constructed [rank=5 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Constructed</b></td></tr>
   <tr>
@@ -58,22 +58,22 @@ constructed [label=<
 constructed:cons -> constructor:id
 constructed:tw -> tollway:id
 
-vehicle [label=<
+vehicle [rank=6 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Vehicle</b></td></tr>
   <tr>
     <td><u>plateNum</u></td>
     <td>tollRate</td>
     <td>weight</td>
-    <td port="tag">E-tag</td>
     <td>Registration</td>
     <td port="dr_id">driverLicense</td>
+    <td port="tag">E-tag</td>
   </tr>
 </table>>];
 vehicle:dr_id -> driver:license
 
 
-driver [label=<
+driver [rank=7 label=<
 <table border="0" cellborder="1" cellspacing="0">
   <tr><td BORDER="0"><b>Driver</b></td></tr>
   <tr>
