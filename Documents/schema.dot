@@ -63,14 +63,16 @@ vehicle [rank=6 label=<
   <tr><td BORDER="0"><b>Vehicle</b></td></tr>
   <tr>
     <td><u>plateNum</u></td>
+    <td>State Registered</td>
+    <td>Date Registered</td>
+    <td>R. Exp. Date</td>
     <td>tollRate</td>
     <td>weight</td>
-    <td>Registration</td>
     <td port="dr_id">driverLicense</td>
     <td port="tag">E-tag</td>
   </tr>
 </table>>];
-vehicle:dr_id -> driver:license
+vehicle:dr_id -> driver:id
 
 
 driver [rank=7 label=<
@@ -78,6 +80,14 @@ driver [rank=7 label=<
   <tr><td BORDER="0"><b>Driver</b></td></tr>
   <tr>
     <td port="id">license</td>
+    <td>Ht</td>
+    <td>Wt</td>
+    <td>Eye</td>
+    <td>Sex</td>
+    <td>DOB</td>
+    <td>Exp</td>
+    <td>Iss</td>
+    <td>Address</td>
   </tr>
 </table>>];
 
