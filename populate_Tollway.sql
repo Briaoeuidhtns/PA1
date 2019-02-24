@@ -1,0 +1,12 @@
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (1, 1996, 445, 9);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (2, 2001, 172, 8);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (3, 2009, 172, 7);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (4, 2011, 81, 1);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (5, 1995, 150, 7);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (6, 1995, 316, 9);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (7, 2008, 242, 5);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (8, 2003, 34, 5);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (9, 2010, 308, 4);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (10, 2008, 247, 7);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (11, 1970, 200, 10);
+insert into Tollway (ID, CYear, TWLength, NumLanes) values (12, 1960, 247, 10);
