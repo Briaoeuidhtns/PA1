@@ -22,6 +22,7 @@ toll_gate [rank=2 label=<
   <tr>
     <td port="id"><u>id</u></td>
     <td port="tw_id"><u>tollwayId</u></td>
+    <td>TGLength</td>
   </tr>
 </table>>];
 
@@ -88,6 +89,7 @@ driver [rank=7 label=<
     <td>Exp</td>
     <td>Iss</td>
     <td>Address</td>
+	<td>Name</td>
   </tr>
 </table>>];
 

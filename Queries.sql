@@ -29,7 +29,18 @@ GROUP BY ETCReading.ETag
 HAVING COUNT (ETCReading.ETag) > 2);
 
 /* 5 */
-SELECT Vehicle.TollRate * 
-(SELECT Count( * ) FROM ETCReading 
-WHERE Year(DTime) = 2018 and ETag = Vehicle.ETag) 
-FROM Vehicle
+SELECT 
+	Vehicle.TollRate * 
+	(SELECT Count( * ) FROM ETCReading 
+	WHERE Year(DTime) = 2018 and ETCReading.ETag = Vehicle.ETag and Vehicle.License = Driver.License
+	) as spent,
+Driver.FullName FROM Vehicle, Driver
+WHERE Vehicle.License = Driver.License 
+ORDER BY (spent) DESC;
+
+
+
+
+
+
+/* 1 */
