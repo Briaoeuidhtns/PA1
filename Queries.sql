@@ -1,7 +1,7 @@
 
 /* 1 */
 SELECT ID, TWLength FROM Tollway
-WHERE  CYear < 1990;
+WHERE CYear < 1990;
 
 
 /* 2 */
@@ -44,3 +44,12 @@ ORDER BY (spent) DESC;
 
 
 /* 1 */
+
+
+/* 3 */
+SELECT TollGate.ID FROM TollGate
+WHERE TollGate.ID in 
+(SELECT TGID
+FROM ETCReading 
+GROUP BY TGID
+HAVING COUNT(TGID) > 3);
